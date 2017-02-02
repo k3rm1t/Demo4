@@ -16,7 +16,7 @@ namespace Elevator
         {
             get
             {
-                Floor = floor;
+                //Floor = floor;
                 return floor;
             }
             set
