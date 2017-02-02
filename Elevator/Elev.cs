@@ -10,20 +10,20 @@ namespace Elevator
     {
         private readonly int maxFloor = 5;
         private readonly int minFloor = 1;
-        private int minfloor, maxfloor,floor;
+        private int floor;
         public int Floor
         {
             get
             {
-                return Floor;
+                return floor;
             }
             set
             {
-                if (minfloor >= value && value <= maxFloor) floor = value;
+                if (minFloor >= value && value <= maxFloor) floor = value;
                 else
                 {
-                    Console.WriteLine("You can't go through the roof.");
-                    Floor = value;
+                    Console.WriteLine("Option is unavailable.");
+                    
                 }
             }
         }
