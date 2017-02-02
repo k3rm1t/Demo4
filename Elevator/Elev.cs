@@ -11,10 +11,12 @@ namespace Elevator
         private readonly int maxFloor = 5;
         private readonly int minFloor = 1;
         private int floor;
+       
         public int Floor
         {
             get
             {
+                Floor = floor;
                 return floor;
             }
             set
@@ -27,5 +29,15 @@ namespace Elevator
                 }
             }
         }
+        // def const
+        public Elev()
+        {
+        }
+        //methods
+        public void Do()
+        {
+            Console.WriteLine(Floor + ".floor");
+        }
+       
     }
 }
