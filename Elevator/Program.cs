@@ -17,11 +17,17 @@ namespace Elevator
             {
                 Console.WriteLine("If you want to get out, press 0 & enter.");
                 Console.WriteLine("Select floor (1-5) -> ");
-                //elevator.Floor
-                i = int.Parse(Console.ReadLine());// ota muuttujaan ja vertaa sitä alle
-                elevator.Floor = i;
-                Console.WriteLine("You are in floor " + elevator.Floor);
-                elevator.Do();
+                string line = Console.ReadLine();
+                //try to read number from the given line
+                bool result = int.TryParse(line, out i);
+                // number(int) was given correctly
+                if (result)
+                {
+                    elevator.Floor = i;
+                    Console.WriteLine("You are in floor " + elevator.Floor);
+                    elevator.Do();
+                }
+                else Console.WriteLine("Try again!");
             }
             while ( i != 0);//tänne
             Console.WriteLine("Thank you for your corporation.");
